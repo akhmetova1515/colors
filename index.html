@@ -2,7 +2,7 @@
 <html lang="ru">
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Палитры для ваших идей</title>
+    <title>РџР°Р»РёС‚СЂС‹ РґР»СЏ РІР°С€РёС… РёРґРµР№</title>
     <style>
         :root {
             --primary-color: #6200ee;
@@ -177,8 +177,8 @@
 <body>
     <header>
         <div class="container">
-            <h1>Генератор цветовых палитр</h1>
-            <p>Создавайте красивые сочетания цветов для ваших проектов</p>
+            <h1>Р“РµРЅРµСЂР°С‚РѕСЂ С†РІРµС‚РѕРІС‹С… РїР°Р»РёС‚СЂ</h1>
+            <p>РЎРѕР·РґР°РІР°Р№С‚Рµ РєСЂР°СЃРёРІС‹Рµ СЃРѕС‡РµС‚Р°РЅРёСЏ С†РІРµС‚РѕРІ РґР»СЏ РІР°С€РёС… РїСЂРѕРµРєС‚РѕРІ</p>
         </div>
     </header>
 
@@ -186,34 +186,34 @@
         <div class="controls">
             <div class="color-picker">
                 <input type="color" id="baseColor" value="#6200ee">
-                <label for="baseColor">Базовый цвет</label>
+                <label for="baseColor">Р‘Р°Р·РѕРІС‹Р№ С†РІРµС‚</label>
             </div>
 
             <select id="paletteType">
-                <option value="analogous">Аналоговая</option>
-                <option value="monochromatic">Монохроматическая</option>
-                <option value="complementary">Комплементарная</option>
-                <option value="split-complementary">Раздельно-комплементарная</option>
-                <option value="triadic">Триадная</option>
-                <option value="tetradic">Тетрадная</option>
-                <option value="square">Квадратная</option>
+                <option value="analogous">РђРЅР°Р»РѕРіРѕРІР°СЏ</option>
+                <option value="monochromatic">РњРѕРЅРѕС…СЂРѕРјР°С‚РёС‡РµСЃРєР°СЏ</option>
+                <option value="complementary">РљРѕРјРїР»РµРјРµРЅС‚Р°СЂРЅР°СЏ</option>
+                <option value="split-complementary">Р Р°Р·РґРµР»СЊРЅРѕ-РєРѕРјРїР»РµРјРµРЅС‚Р°СЂРЅР°СЏ</option>
+                <option value="triadic">РўСЂРёР°РґРЅР°СЏ</option>
+                <option value="tetradic">РўРµС‚СЂР°РґРЅР°СЏ</option>
+                <option value="square">РљРІР°РґСЂР°С‚РЅР°СЏ</option>
             </select>
 
-            <button id="generateBtn">Сгенерировать палитру</button>
-            <button id="randomBtn">Случайная палитра</button>
+            <button id="generateBtn">РЎРіРµРЅРµСЂРёСЂРѕРІР°С‚СЊ РїР°Р»РёС‚СЂСѓ</button>
+            <button id="randomBtn">РЎР»СѓС‡Р°Р№РЅР°СЏ РїР°Р»РёС‚СЂР°</button>
         </div>
 
         <div class="palette-container" id="paletteContainer">
-            <!-- Палитры будут добавляться сюда -->
+            <!-- РџР°Р»РёС‚СЂС‹ Р±СѓРґСѓС‚ РґРѕР±Р°РІР»СЏС‚СЊСЃСЏ СЃСЋРґР° -->
         </div>
     </div>
 
     <footer>
         <div class="container">
-            <p>Используйте эти цветовые схемы для ваших дизайнов, веб-сайтов и графики</p>
-            <h6>Данный сайт был создан при поддержки</h6>
+            <p>РСЃРїРѕР»СЊР·СѓР№С‚Рµ СЌС‚Рё С†РІРµС‚РѕРІС‹Рµ СЃС…РµРјС‹ РґР»СЏ РІР°С€РёС… РґРёР·Р°Р№РЅРѕРІ, РІРµР±-СЃР°Р№С‚РѕРІ Рё РіСЂР°С„РёРєРё</p>
+            <h6>Р”Р°РЅРЅС‹Р№ СЃР°Р№С‚ Р±С‹Р» СЃРѕР·РґР°РЅ РїСЂРё РїРѕРґРґРµСЂР¶РєРё</h6>
             <nav>
-                <h6><a href="page2.html">федеральной территории Сириус</a></h6>
+                <h6><a href="page2.html">С„РµРґРµСЂР°Р»СЊРЅРѕР№ С‚РµСЂСЂРёС‚РѕСЂРёРё РЎРёСЂРёСѓСЃ</a></h6>
             </nav>
         </div>
     </footer>
@@ -226,14 +226,14 @@
             const randomBtn = document.getElementById('randomBtn');
             const paletteContainer = document.getElementById('paletteContainer');
 
-            // Генерация палитры при загрузке
+            // Р“РµРЅРµСЂР°С†РёСЏ РїР°Р»РёС‚СЂС‹ РїСЂРё Р·Р°РіСЂСѓР·РєРµ
             generatePalette();
 
-            // Обработчики событий
+            // РћР±СЂР°Р±РѕС‚С‡РёРєРё СЃРѕР±С‹С‚РёР№
             generateBtn.addEventListener('click', generatePalette);
             randomBtn.addEventListener('click', generateRandomPalette);
 
-            // Функция генерации палитры
+            // Р¤СѓРЅРєС†РёСЏ РіРµРЅРµСЂР°С†РёРё РїР°Р»РёС‚СЂС‹
             function generatePalette() {
                 const baseColor = baseColorInput.value;
                 const paletteType = paletteTypeSelect.value;
@@ -242,36 +242,36 @@
                 displayPalette(palette, paletteType);
             }
 
-            // Функция генерации случайной палитры
+            // Р¤СѓРЅРєС†РёСЏ РіРµРЅРµСЂР°С†РёРё СЃР»СѓС‡Р°Р№РЅРѕР№ РїР°Р»РёС‚СЂС‹
             function generateRandomPalette() {
-                // Генерируем случайный цвет
+                // Р“РµРЅРµСЂРёСЂСѓРµРј СЃР»СѓС‡Р°Р№РЅС‹Р№ С†РІРµС‚
                 const randomColor = '#' + Math.floor(Math.random()*16777215).toString(16);
                 baseColorInput.value = randomColor;
 
-                // Выбираем случайный тип палитры
+                // Р’С‹Р±РёСЂР°РµРј СЃР»СѓС‡Р°Р№РЅС‹Р№ С‚РёРї РїР°Р»РёС‚СЂС‹
                 const types = Array.from(paletteTypeSelect.options).map(opt => opt.value);
                 const randomType = types[Math.floor(Math.random() * types.length)];
                 paletteTypeSelect.value = randomType;
 
-                // Генерируем палитру
+                // Р“РµРЅРµСЂРёСЂСѓРµРј РїР°Р»РёС‚СЂСѓ
                 generatePalette();
             }
 
-            // Функция создания цветовой палитры
+            // Р¤СѓРЅРєС†РёСЏ СЃРѕР·РґР°РЅРёСЏ С†РІРµС‚РѕРІРѕР№ РїР°Р»РёС‚СЂС‹
             function createColorPalette(baseHex, type) {
                 const base = hexToRgb(baseHex);
                 const colors = [];
 
                 switch(type) {
                     case 'analogous':
-                        // Аналоговая схема (соседние цвета в цветовом круге)
+                        // РђРЅР°Р»РѕРіРѕРІР°СЏ СЃС…РµРјР° (СЃРѕСЃРµРґРЅРёРµ С†РІРµС‚Р° РІ С†РІРµС‚РѕРІРѕРј РєСЂСѓРіРµ)
                         colors.push(rgbToHex(adjustHue(base, 30)));
                         colors.push(baseHex);
                         colors.push(rgbToHex(adjustHue(base, -30)));
                         break;
 
                     case 'monochromatic':
-                        // Монохроматическая схема (оттенки одного цвета)
+                        // РњРѕРЅРѕС…СЂРѕРјР°С‚РёС‡РµСЃРєР°СЏ СЃС…РµРјР° (РѕС‚С‚РµРЅРєРё РѕРґРЅРѕРіРѕ С†РІРµС‚Р°)
                         colors.push(rgbToHex(adjustLightness(base, 0.2)));
                         colors.push(baseHex);
                         colors.push(rgbToHex(adjustLightness(base, -0.2)));
@@ -280,27 +280,27 @@
                         break;
 
                     case 'complementary':
-                        // Комплементарная схема (противоположные цвета)
+                        // РљРѕРјРїР»РµРјРµРЅС‚Р°СЂРЅР°СЏ СЃС…РµРјР° (РїСЂРѕС‚РёРІРѕРїРѕР»РѕР¶РЅС‹Рµ С†РІРµС‚Р°)
                         colors.push(baseHex);
                         colors.push(rgbToHex(adjustHue(base, 180)));
                         break;
 
                     case 'split-complementary':
-                        // Раздельно-комплементарная схема
+                        // Р Р°Р·РґРµР»СЊРЅРѕ-РєРѕРјРїР»РµРјРµРЅС‚Р°СЂРЅР°СЏ СЃС…РµРјР°
                         colors.push(baseHex);
                         colors.push(rgbToHex(adjustHue(base, 150)));
                         colors.push(rgbToHex(adjustHue(base, 210)));
                         break;
 
                     case 'triadic':
-                        // Триадная схема (3 равномерно распределенных цвета)
+                        // РўСЂРёР°РґРЅР°СЏ СЃС…РµРјР° (3 СЂР°РІРЅРѕРјРµСЂРЅРѕ СЂР°СЃРїСЂРµРґРµР»РµРЅРЅС‹С… С†РІРµС‚Р°)
                         colors.push(baseHex);
                         colors.push(rgbToHex(adjustHue(base, 120)));
                         colors.push(rgbToHex(adjustHue(base, 240)));
                         break;
 
                     case 'tetradic':
-                        // Тетрадная схема (4 цвета - двойные комплементарные)
+                        // РўРµС‚СЂР°РґРЅР°СЏ СЃС…РµРјР° (4 С†РІРµС‚Р° - РґРІРѕР№РЅС‹Рµ РєРѕРјРїР»РµРјРµРЅС‚Р°СЂРЅС‹Рµ)
                         colors.push(baseHex);
                         colors.push(rgbToHex(adjustHue(base, 60)));
                         colors.push(rgbToHex(adjustHue(base, 180)));
@@ -308,7 +308,7 @@
                         break;
 
                     case 'square':
-                        // Квадратная схема (4 равномерно распределенных цвета)
+                        // РљРІР°РґСЂР°С‚РЅР°СЏ СЃС…РµРјР° (4 СЂР°РІРЅРѕРјРµСЂРЅРѕ СЂР°СЃРїСЂРµРґРµР»РµРЅРЅС‹С… С†РІРµС‚Р°)
                         colors.push(baseHex);
                         colors.push(rgbToHex(adjustHue(base, 90)));
                         colors.push(rgbToHex(adjustHue(base, 180)));
@@ -319,20 +319,20 @@
                 return colors;
             }
 
-            // Функция отображения палитры
+            // Р¤СѓРЅРєС†РёСЏ РѕС‚РѕР±СЂР°Р¶РµРЅРёСЏ РїР°Р»РёС‚СЂС‹
             function displayPalette(colors, type) {
-                // Очищаем контейнер
+                // РћС‡РёС‰Р°РµРј РєРѕРЅС‚РµР№РЅРµСЂ
                 paletteContainer.innerHTML = '';
 
-                // Создаем элемент палитры
+                // РЎРѕР·РґР°РµРј СЌР»РµРјРµРЅС‚ РїР°Р»РёС‚СЂС‹
                 const paletteElement = document.createElement('div');
                 paletteElement.className = 'palette';
 
-                // Создаем блок с цветами
+                // РЎРѕР·РґР°РµРј Р±Р»РѕРє СЃ С†РІРµС‚Р°РјРё
                 const colorsElement = document.createElement('div');
                 colorsElement.className = 'palette-colors';
 
-                // Добавляем цвета
+                // Р”РѕР±Р°РІР»СЏРµРј С†РІРµС‚Р°
                 colors.forEach(color => {
                     const colorElement = document.createElement('div');
                     colorElement.className = 'color';
@@ -341,7 +341,7 @@
                     colorsElement.appendChild(colorElement);
                 });
 
-                // Создаем блок с информацией
+                // РЎРѕР·РґР°РµРј Р±Р»РѕРє СЃ РёРЅС„РѕСЂРјР°С†РёРµР№
                 const infoElement = document.createElement('div');
                 infoElement.className = 'palette-info';
 
@@ -351,28 +351,28 @@
 
                 const typeElement = document.createElement('p');
                 typeElement.className = 'palette-type';
-                typeElement.textContent = `${colors.length} цветов`;
+                typeElement.textContent = `${colors.length} С†РІРµС‚РѕРІ`;
 
                 const copyBtn = document.createElement('button');
                 copyBtn.className = 'copy-btn';
-                copyBtn.textContent = 'Копировать цвета';
+                copyBtn.textContent = 'РљРѕРїРёСЂРѕРІР°С‚СЊ С†РІРµС‚Р°';
                 copyBtn.addEventListener('click', () => copyColors(colors));
 
                 infoElement.appendChild(titleElement);
                 infoElement.appendChild(typeElement);
                 infoElement.appendChild(copyBtn);
 
-                // Собираем палитру
+                // РЎРѕР±РёСЂР°РµРј РїР°Р»РёС‚СЂСѓ
                 paletteElement.appendChild(colorsElement);
                 paletteElement.appendChild(infoElement);
 
-                // Добавляем в контейнер
+                // Р”РѕР±Р°РІР»СЏРµРј РІ РєРѕРЅС‚РµР№РЅРµСЂ
                 paletteContainer.appendChild(paletteElement);
             }
 
-            // Вспомогательные функции
+            // Р’СЃРїРѕРјРѕРіР°С‚РµР»СЊРЅС‹Рµ С„СѓРЅРєС†РёРё
 
-            // Преобразование HEX в RGB
+            // РџСЂРµРѕР±СЂР°Р·РѕРІР°РЅРёРµ HEX РІ RGB
             function hexToRgb(hex) {
                 const r = parseInt(hex.substring(1, 3), 16);
                 const g = parseInt(hex.substring(3, 5), 16);
@@ -380,7 +380,7 @@
                 return { r, g, b };
             }
 
-            // Преобразование RGB в HEX
+            // РџСЂРµРѕР±СЂР°Р·РѕРІР°РЅРёРµ RGB РІ HEX
             function rgbToHex({ r, g, b }) {
                 return '#' + [r, g, b].map(x => {
                     const hex = x.toString(16);
@@ -388,17 +388,17 @@
                 }).join('');
             }
 
-            // Корректировка оттенка
+            // РљРѕСЂСЂРµРєС‚РёСЂРѕРІРєР° РѕС‚С‚РµРЅРєР°
             function adjustHue(rgb, degrees) {
                 let { r, g, b } = rgb;
 
-                // Конвертируем RGB в HSL
+                // РљРѕРЅРІРµСЂС‚РёСЂСѓРµРј RGB РІ HSL
                 r /= 255, g /= 255, b /= 255;
                 const max = Math.max(r, g, b), min = Math.min(r, g, b);
                 let h, s, l = (max + min) / 2;
 
                 if (max === min) {
-                    h = s = 0; // ахроматический
+                    h = s = 0; // Р°С…СЂРѕРјР°С‚РёС‡РµСЃРєРёР№
                 } else {
                     const d = max - min;
                     s = l > 0.5 ? d / (2 - max - min) : d / (max + min);
@@ -410,14 +410,14 @@
                     h /= 6;
                 }
 
-                // Корректируем hue
+                // РљРѕСЂСЂРµРєС‚РёСЂСѓРµРј hue
                 h = (h * 360 + degrees) % 360;
                 if (h < 0) h += 360;
                 h /= 360;
 
-                // Конвертируем HSL обратно в RGB
+                // РљРѕРЅРІРµСЂС‚РёСЂСѓРµРј HSL РѕР±СЂР°С‚РЅРѕ РІ RGB
                 if (s === 0) {
-                    r = g = b = l; // ахроматический
+                    r = g = b = l; // Р°С…СЂРѕРјР°С‚РёС‡РµСЃРєРёР№
                 } else {
                     const hue2rgb = (p, q, t) => {
                         if (t < 0) t += 1;
@@ -442,17 +442,17 @@
                 };
             }
 
-            // Корректировка светлоты
+            // РљРѕСЂСЂРµРєС‚РёСЂРѕРІРєР° СЃРІРµС‚Р»РѕС‚С‹
             function adjustLightness(rgb, factor) {
                 let { r, g, b } = rgb;
 
-                // Конвертируем RGB в HSL
+                // РљРѕРЅРІРµСЂС‚РёСЂСѓРµРј RGB РІ HSL
                 r /= 255, g /= 255, b /= 255;
                 const max = Math.max(r, g, b), min = Math.min(r, g, b);
                 let h, s, l = (max + min) / 2;
 
                 if (max === min) {
-                    h = s = 0; // ахроматический
+                    h = s = 0; // Р°С…СЂРѕРјР°С‚РёС‡РµСЃРєРёР№
                 } else {
                     const d = max - min;
                     s = l > 0.5 ? d / (2 - max - min) : d / (max + min);
@@ -464,12 +464,12 @@
                     h /= 6;
                 }
 
-                // Корректируем lightness
+                // РљРѕСЂСЂРµРєС‚РёСЂСѓРµРј lightness
                 l = Math.min(1, Math.max(0, l + factor));
 
-                // Конвертируем HSL обратно в RGB
+                // РљРѕРЅРІРµСЂС‚РёСЂСѓРµРј HSL РѕР±СЂР°С‚РЅРѕ РІ RGB
                 if (s === 0) {
-                    r = g = b = l; // ахроматический
+                    r = g = b = l; // Р°С…СЂРѕРјР°С‚РёС‡РµСЃРєРёР№
                 } else {
                     const hue2rgb = (p, q, t) => {
                         if (t < 0) t += 1;
@@ -494,27 +494,27 @@
                 };
             }
 
-            // Получение читаемого названия палитры
+            // РџРѕР»СѓС‡РµРЅРёРµ С‡РёС‚Р°РµРјРѕРіРѕ РЅР°Р·РІР°РЅРёСЏ РїР°Р»РёС‚СЂС‹
             function getPaletteName(type) {
                 const names = {
-                    'analogous': 'Аналоговая палитра',
-                    'monochromatic': 'Монохроматическая палитра',
-                    'complementary': 'Комплементарная палитра',
-                    'split-complementary': 'Раздельно-комплементарная',
-                    'triadic': 'Триадная палитра',
-                    'tetradic': 'Тетрадная палитра',
-                    'square': 'Квадратная палитра'
+                    'analogous': 'РђРЅР°Р»РѕРіРѕРІР°СЏ РїР°Р»РёС‚СЂР°',
+                    'monochromatic': 'РњРѕРЅРѕС…СЂРѕРјР°С‚РёС‡РµСЃРєР°СЏ РїР°Р»РёС‚СЂР°',
+                    'complementary': 'РљРѕРјРїР»РµРјРµРЅС‚Р°СЂРЅР°СЏ РїР°Р»РёС‚СЂР°',
+                    'split-complementary': 'Р Р°Р·РґРµР»СЊРЅРѕ-РєРѕРјРїР»РµРјРµРЅС‚Р°СЂРЅР°СЏ',
+                    'triadic': 'РўСЂРёР°РґРЅР°СЏ РїР°Р»РёС‚СЂР°',
+                    'tetradic': 'РўРµС‚СЂР°РґРЅР°СЏ РїР°Р»РёС‚СЂР°',
+                    'square': 'РљРІР°РґСЂР°С‚РЅР°СЏ РїР°Р»РёС‚СЂР°'
                 };
-                return names[type] || 'Цветовая палитра';
+                return names[type] || 'Р¦РІРµС‚РѕРІР°СЏ РїР°Р»РёС‚СЂР°';
             }
 
-            // Копирование цветов в буфер обмена
+            // РљРѕРїРёСЂРѕРІР°РЅРёРµ С†РІРµС‚РѕРІ РІ Р±СѓС„РµСЂ РѕР±РјРµРЅР°
             function copyColors(colors) {
                 const text = colors.join(', ');
                 navigator.clipboard.writeText(text).then(() => {
-                    alert('Цвета скопированы: ' + text);
+                    alert('Р¦РІРµС‚Р° СЃРєРѕРїРёСЂРѕРІР°РЅС‹: ' + text);
                 }).catch(err => {
-                    console.error('Ошибка копирования: ', err);
+                    console.error('РћС€РёР±РєР° РєРѕРїРёСЂРѕРІР°РЅРёСЏ: ', err);
                 });
             }
         });
