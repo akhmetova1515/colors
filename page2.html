@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Федеральная территория "Сириус"</title>
+    <style>
+        :root {
+            --primary: #0054a6;
+            --secondary: #00a0e3;
+            --accent: #ffd100;
+            --light: #f5f9ff;
+            --dark: #002d5a;
+        }
+
+        body {
+            font-family: 'Segoe UI', 'Roboto', sans-serif;
+            margin: 0;
+            padding: 0;
+            background: var(--light);
+            color: var(--dark);
+            line-height: 1.6;
+        }
+
+        header {
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            color: white;
+            padding: 3rem 0;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+            header::after {
+                content: '';
+                position: absolute;
+                bottom: -50px;
+                left: 0;
+                right: 0;
+                height: 100px;
+                background: url('wave.svg') center/cover no-repeat;
+                z-index: 1;
+            }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+            position: relative;
+            z-index: 2;
+        }
+
+        h1 {
+            margin: 0;
+            font-size: 2.8rem;
+            font-weight: 700;
+            text-shadow: 0 2px 4px rgba(0,0,0,0.2);
+        }
+
+        .tagline {
+            font-size: 1.4rem;
+            opacity: 0.9;
+            margin-top: 1rem;
+            font-weight: 300;
+        }
+                
+        .section {
+            background: white;
+            border-radius: 16px;
+            padding: 2.5rem;
+            margin: 3rem 0;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+            position: relative;
+        }
+
+        .section-title {
+            color: var(--primary);
+            font-size: 2rem;
+            margin-top: 0;
+            margin-bottom: 1.5rem;
+            position: relative;
+            padding-bottom: 0.5rem;
+        }
+
+            .section-title::after {
+                content: '';
+                position: absolute;
+                bottom: 0;
+                left: 0;
+                width: 80px;
+                height: 4px;
+                background: var(--accent);
+                border-radius: 2px;
+            }
+
+        .feature-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .feature-card {
+            background: white;
+            border-radius: 12px;
+            padding: 1.8rem;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+            border-top: 4px solid var(--secondary);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+            .feature-card:hover {
+                transform: translateY(-5px);
+                box-shadow: 0 10px 25px rgba(0, 160, 227, 0.15);
+            }
+
+            .feature-card h3 {
+                color: var(--primary);
+                margin-top: 0;
+                display: flex;
+                align-items: center;
+            }
+
+                .feature-card h3::before {
+                    content: '•';
+                    color: var(--accent);
+                    font-size: 2rem;
+                    margin-right: 0.5rem;
+                    line-height: 1;
+                }
+
+        .checkbox-list {
+            margin: 2rem 0;
+        }
+
+        .checkbox-item {
+            display: flex;
+            align-items: center;
+            margin: 1.2rem 0;
+            padding: 1rem;
+            background: rgba(0, 160, 227, 0.05);
+            border-radius: 8px;
+            transition: background 0.3s;
+        }
+
+            .checkbox-item:hover {
+                background: rgba(0, 160, 227, 0.1);
+            }
+
+            .checkbox-item input {
+                margin-right: 1.2rem;
+                transform: scale(1.4);
+                accent-color: var(--primary);
+            }
+
+            .checkbox-item label {
+                font-size: 1.1rem;
+                font-weight: 500;
+                color: var(--dark);
+                cursor: pointer;
+            }
+
+        .stats-container {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 1.5rem;
+            margin: 3rem 0;
+        }
+
+        .stat-card {
+            background: white;
+            border-radius: 12px;
+            padding: 1.5rem;
+            text-align: center;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+        }
+
+        .stat-number {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: var(--primary);
+            margin: 0.5rem 0;
+        }
+
+        .stat-label {
+            font-size: 1rem;
+            color: var(--dark);
+            opacity: 0.8;
+        }
+
+        footer {
+            background: var(--dark);
+            color: white;
+            padding: 3rem 0;
+            margin-top: 4rem;
+        }
+
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+        }
+
+        .footer-logo {
+            font-size: 1.8rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+            color: white;
+        }
+
+        .footer-links h3 {
+            color: var(--accent);
+            margin-top: 0;
+        }
+
+        .footer-links ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .footer-links li {
+            margin-bottom: 0.8rem;
+        }
+
+        .footer-links a {
+            color: white;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+            .footer-links a:hover {
+                color: var(--accent);
+            }
+
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2.2rem;
+            }
+
+            .stats-container {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .hero-image {
+                height: 300px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>Федеральная территория "Сириус"</h1>
+            <p class="tagline">Центр научно-технологического прорыва России</p>
+        </div>
+    </header>
+
+    <div class="container">
+        <div class="hero-image"></div>
+
+        <div class="section">
+            <h2 class="section-title">О территории</h2>
+            <p>Федеральная территория "Сириус" - уникальный проект, созданный для развития науки, образования и инноваций на базе олимпийского наследия Сочи. Это первый в России опыт создания федеральной территории с особым статусом управления.</p>
+                        
+        </div>
+
+        <div class="stats-container">
+            <div class="stat-card">
+                <div class="stat-number">260+</div>
+                <div class="stat-label">лабораторий и центров</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-number">15 000+</div>
+                <div class="stat-label">участников программ</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-number">350</div>
+                <div class="stat-label">гектаров территории</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-number">2015</div>
+                <div class="stat-label">год основания</div>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2 class="section-title">Основные направления</h2>
+
+            <div class="feature-grid">
+                <div class="feature-card">
+                    <h3>Образовательный центр</h3>
+                    <p>Программы для одаренных детей, университет "Сириус", школа-интернат, программы повышения квалификации педагогов.</p>
+                </div>
+
+                <div class="feature-card">
+                    <h3>Научно-технологический университет</h3>
+                    <p>Фундаментальные и прикладные исследования по приоритетным направлениям научно-технологического развития.</p>
+                </div>
+
+                <div class="feature-card">
+                    <h3>Инновационный научно-технологический центр</h3>
+                    <p>Площадка для развития стартапов, технологических компаний и коммерциализации научных разработок.</p>
+                </div>
+
+                <div class="feature-card">
+                    <h3>Технопарк</h3>
+                    <p>Инфраструктура для технологического предпринимательства, включая лаборатории, коворкинги и бизнес-инкубаторы.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2 class="section-title">Уникальные возможности</h2>
+
+            <div class="checkbox-list">
+                <div class="checkbox-item">                    
+                    <label for="programs">Образовательные программы</label>
+                </div>
+
+                <div class="checkbox-item">                   
+                    <label for="research">Исследовательские проекты</label>
+                </div>
+
+                <div class="checkbox-item">
+                    <label for="business">Поддержка бизнеса</label>
+                </div>
+
+                <div class="checkbox-item">                    
+                    <label for="visit">Экскурсии и мероприятия</label>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div>
+                    <div class="footer-logo">Сириус</div>
+                    <p>Федеральная территория инноваций и технологий</p>
+                    <nav>
+                        <a href="index.html">Главная</a>                        
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
